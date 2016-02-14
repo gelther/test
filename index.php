@@ -4,4 +4,4 @@ if ( true )  {
   echo 'true';
 }
 
-echo 'c';
+echo 'cc';
