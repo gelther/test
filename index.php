@@ -3,5 +3,3 @@
 if ( true )  {
   echo 'true';
 }
-
-f8
