@@ -1,6 +1,7 @@
 <?php
 
-if ( true )  {
+if (true)  {
   echo 'true';
 }
 
+f77
