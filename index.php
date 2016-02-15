@@ -1,5 +1,8 @@
 <?php
 
-if ( true )  {
+if (true)  {
   echo 'true';
 }
+h6  
+7
+8
