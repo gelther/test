@@ -3,4 +3,3 @@
 if ( true )  {
   echo 'true';
 }
-g4
