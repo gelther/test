@@ -1,10 +1,10 @@
 <?php
 
-if ( true )  {
-  echo 'true';
+if ( true ) {
+	echo 'true';
 }
 
-$array[ 1 ] = '1';
+$array[1] = '1';
 $array[2] = '2';
 
 			$values['field'] 		= 'select';
