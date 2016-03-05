@@ -35,7 +35,7 @@ class WACF_Admin_Settings {
 	 */
 	public function init() {
 
-		require_once plugin_dir_path( __FILE__ ) . 'wacf-admin-functions.php';
+		require_once plugin_dir_path( __FILE__ ).'wacf-admin-functions.php';
 
 		// Save settings
 		add_action( 'woocommerce_settings_save_checkout', array( $this, 'update_options' ) );
@@ -179,7 +179,7 @@ class WACF_Admin_Settings {
 	 */
 	public function generate_table_field() {
 		// Checkout fields table
-		require_once plugin_dir_path( __FILE__ ) . 'views/html-advanced-checkout-fields-table.php';
+		require_once plugin_dir_path( __FILE__ ) .'views/html-advanced-checkout-fields-table.php';
 
 	}
 
