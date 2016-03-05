@@ -14,19 +14,6 @@ class WACF_Admin_Settings {
 
 
 	/**
-	 * Constructor.
-	 *
-	 * @since 1.0.0
-	 */
-	public function __construct() {
-
-		// Initialize class
-		add_action( 'admin_init', array( $this, 'init' ), 11 );
-
-	}
-
-
-	/**
 	 * Initialize class.
 	 *
 	 * Initialize the class components/hooks on admin_init so its called once.
