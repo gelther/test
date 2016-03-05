@@ -54,6 +54,24 @@ class WACF_Admin_Settings {
 
 
 
+	/**
+	 * Keep menu open.
+	 *
+	 * Highlights the correct top level admin menu item for post type add screens.
+	 *
+	 * @since 1.0.0
+	 */
+	public function menu_highlight() {
+
+		global $parent_file, $submenu_file, $post_type;
+
+		if ( 'checkout_field_group' == $post_type ) :
+			$parent_file  = 'woocommerce';
+			$submenu_file = 'wc-settings';
+		endif;
+
+	}
+
 
 	/**
 	 * Keep menu open.
