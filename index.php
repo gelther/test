@@ -53,7 +53,6 @@ class WACF_Admin_Settings {
 	}
 
 
-
 	/**
 	 * Keep menu open.
 	 *
@@ -99,8 +98,8 @@ class WACF_Admin_Settings {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param  array $sections List of existing shipping sections.
-	 * @return array           List of modified shipping sections.
+	 * @param   array  $sections  List of existing shipping sections.
+	 * @return  array             List of modified shipping sections.
 	 */
 	public function add_checkout_fields_section( $sections ) {
 
@@ -118,7 +117,7 @@ class WACF_Admin_Settings {
 	 *
 	 * @since 1.0.0
 	 *
-	 * @param string $current_section Slug of the current section
+	 * @param  string  $current_section  Slug of the current section
 	 */
 	public function advanced_checkout_field_options_section_settings( $current_section ) {
 
@@ -139,11 +138,12 @@ class WACF_Admin_Settings {
 	 *
 	 * Load and render table as a field type.
 	 *
-	 * @return string
+	 * @return  string
 	 */
 	public function generate_table_field() {
+
 		// Checkout fields table
-		require_once plugin_dir_path( __FILE__ ) .'views/html-advanced-checkout-fields-table.php';
+		require_once plugin_dir_path( __FILE__ ) . 'views/html-advanced-checkout-fields-table.php';
 
 	}
 
