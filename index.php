@@ -13,34 +13,6 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 class WACF_Admin_Settings {
 
 
-	/**
-	 * Initialize class.
-	 *
-	 * Initialize the class components/hooks on admin_init so its called once.
-	 *
-	 * @since 1.0.0
-	 */
-	public function init() {
-
-		require_once plugin_dir_path( __FILE__ ).'wacf-admin-functions.php';
-
-		// Save settings
-		add_action( 'woocommerce_settings_save_checkout', array( $this, 'update_options' ) );
-
-		// Keep WC menu open while in WAS edit screen
-		add_action( 'admin_head', array( $this, 'menu_highlight' ) );
-
-		// Add 'extra shipping options' checkout section
-		add_action( 'woocommerce_get_sections_checkout', array( $this, 'add_checkout_fields_section' ) );
-
-		// Add settings to 'Checkout fields' section
-		add_action( 'woocommerce_settings_checkout', array( $this, 'advanced_checkout_field_options_section_settings' ) );
-
-		// Table field type
-		add_action( 'woocommerce_admin_field_advanced_checkout_field_settings_table', array( $this, 'generate_table_field' ) );
-
-	}
-
 
 	/**
 	 * Settings page array.
