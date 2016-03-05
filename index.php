@@ -12,6 +12,45 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  */
 class WACF_Admin_Settings {
 
+	/**
+	 * Settings page array.
+	 *
+	 * Get settings page fields array.
+	 *
+	 * @since 1.0.0
+	 */
+	public function get_settings() {
+
+		$settings = apply_filters( 'woocommerce_advanced_checkout_field_settings', array(
+
+			array(
+				'title' => __( 'General', 'woocommerce-advanced-checkout-fields' ),
+				'type'  => 'title',
+			),
+
+			array(
+				'title'    => __( 'Enable Advanced Checkout Fields ', 'woocommerce-advanced-checkout-fields' ),
+				'desc'     => __( 'When disabled you will still be able to manage the checkout fields, but no modifications will be done on the front-end.', 'woocommerce-advanced-checkout-fields' ),
+				'id'       => 'enable_woocommerce_advanced_checkout_fields',
+				'default'  => 'yes',
+				'type'     => 'checkbox',
+				'autoload' => false
+			),
+
+			array(
+				'title' => __( 'Advanced Checkout Fields', 'woocommerce-advanced-checkout-fields' ),
+				'type'  => 'advanced_checkout_field_settings_table',
+			),
+
+			array(
+				'type' => 'sectionend',
+			),
+
+		) );
+
+		return $settings;
+
+	}
 
 
 	/**
