@@ -53,17 +53,6 @@ class WACF_Admin_Settings {
 	}
 
 
-	/**
-	 * Save settings.
-	 *
-	 * Save settings based on WooCommerce save_fields() method.
-	 *
-	 * @since 1.0.0
-	 */
-	public function update_options() {
-		WC_Admin_Settings::save_fields( $this->get_settings() );
-
-	}
 
 
 	/**
