@@ -97,7 +97,7 @@ class WACF_Admin_Settings {
 	 */
 	public function generate_table_field() {
 		// Checkout fields table
-		require_once plugin_dir_path( __FILE__ ) .'views/html-advanced-checkout-fields-table.php';
+		require_once plugin_dir_path( __FILE__ ) . 'views/html-advanced-checkout-fields-table.php';
 
 	}
 
