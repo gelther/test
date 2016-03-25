@@ -8,7 +8,7 @@
 	public function set_properties( $request ) {
 		$this->start = true;
 		$this->end   = true;
-		$this->dwnload = true;
+		$this->download = true;
 		$this->price_id = true;
 	}
 	public function set_properties( $request ) {
