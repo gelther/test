@@ -12,8 +12,8 @@
 		$this->price_id = true;
 	}
 	public function set_properties( $request ) {
-		$thisstart = true;
-		$thisend   = true;
+		$thisstart    = true;
+		$thisend      = true;
 		$thisdownload = true;
 		$thisprice_id = true;
 	}
