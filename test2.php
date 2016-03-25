@@ -1,3 +1,4 @@
+
 	public function set_properties( $request ) {
 		$this->start = isset( $request['start'] )            ? sanitize_text_field( $request['start'] ) : '';
 		$this->end = isset( $request['end'] )             ? sanitize_text_field( $request['end'] )  : '';
