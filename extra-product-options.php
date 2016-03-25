@@ -130,7 +130,7 @@ add_filter( 'woocommerce_order_get_items', 'tm_woocommerce_order_get_items', 10,
 						if ( ! is_array( $value ) ) {
 							$value =implode( ',', $value );
 						}
-						$items[ $item_id ]['item_meta'][ $key ][]                                           = $value;
+						$items[ $item_id ]['item_meta'][ $key ][]                                             = $value;
 						$items[ $item_id ]['item_meta_array'][ count( $items[$item_id]['item_meta_array'] ) ] = (object) array( 'key' => $key, 'value' => $value );
 					}
 				}
