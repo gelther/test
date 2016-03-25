@@ -35,7 +35,7 @@ class EDD_Batch_Customers_Export extends EDD_Batch_Export {
 	 *
 	 * @access public
 	 * @since 2.4
-	 * @return array $cols All the columns
+	 * @return  array  $cols  All the columns
 	 */
 	public function csv_cols() {
 
@@ -48,7 +48,9 @@ class EDD_Batch_Customers_Export extends EDD_Batch_Export {
 		);
 
 		return $cols;
+
 	}
+
 
 	/**
 	 * Get the Export Data
@@ -57,7 +59,7 @@ class EDD_Batch_Customers_Export extends EDD_Batch_Export {
 	 * @since 2.4
 	 * Database API
 	 * @global object $edd_logs EDD Logs Object
-	 * @return array $data The data for the CSV file
+	 * @return  array  $data  The data for the CSV file
 	 */
 	public function get_data() {
 
@@ -127,13 +129,15 @@ class EDD_Batch_Customers_Export extends EDD_Batch_Export {
 		$data = apply_filters( 'edd_export_get_data_' . $this->export_type, $data );
 
 		return $data;
+
 	}
+
 
 	/**
 	 * Return the calculated completion percentage
 	 *
 	 * @since 2.4
-	 * @return int
+	 * @return  int
 	 */
 	public function get_percentage_complete() {
 
@@ -157,18 +161,24 @@ class EDD_Batch_Customers_Export extends EDD_Batch_Export {
 		}
 
 		return $percentage;
+
 	}
+
 
 	/**
 	 * Set the properties specific to the Customers export
 	 *
 	 * @since 2.4.2
-	 * @param array $request The Form Data passed into the batch processing
+	 * @param  array  $request  The Form Data passed into the batch processing
 	 */
 	public function set_properties( $request ) {
+
 		$this->start = isset( $request['start'] )            ? sanitize_text_field( $request['start'] ) : '';
 		$this->end   = isset( $request['end'] )             ? sanitize_text_field( $request['end'] )  : '';
 		$this->download = isset( $request['download'] ) ? absint( $request['download'] )   : null;
 		$this->price_id = ! empty( $request['edd_price_option'] ) && 0 !== $request['edd_price_option'] ? absint( $request['edd_price_option'] )   : null;
+
 	}
+
+
 }
