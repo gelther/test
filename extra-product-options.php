@@ -36,8 +36,8 @@ add_filter( 'woocommerce_order_get_items', 'tm_woocommerce_order_get_items', 10,
 						if ( $epo['quantity']<1 ) {
 							$epo['quantity'] = 1;
 						}
-						if ( isset( $wpml_translation_by_id[$epo['section']] ) ) {
-							$epo['name'] = $wpml_translation_by_id[$epo['section']];
+						if ( isset( $wpml_translation_by_id[ $epo['section'] ] ) ) {
+							$epo['name'] = $wpml_translation_by_id[ $epo['section'] ];
 						}
 						if ( ! empty( $epo['multiple'] ) && ! empty( $epo['key'] ) ) {
 							$pos = strrpos( $epo['key'], '_' );
@@ -111,16 +111,16 @@ add_filter( 'woocommerce_order_get_items', 'tm_woocommerce_order_get_items', 10,
 							if ( ! empty( $epo['hidevalueinorder'] ) ) {
 								$epo['value'] ='';
 							}
-							if ( isset( $_unique_elements_added[$epo['section']] ) && isset( $_items_to_add[$epo['section']] ) ) {
-								$_ta                            =$_items_to_add[$epo['section']];
-								$_ta[$epo['name']][]            =$epo['value'];
-								$_items_to_add[$epo['section']] =$_ta;
+							if ( isset( $_unique_elements_added[ $epo['section'] ] ) && isset( $_items_to_add[ $epo['section'] ] ) ) {
+								$_ta                              =$_items_to_add[ $epo['section'] ];
+								$_ta[ $epo['name'] ][]            =$epo['value'];
+								$_items_to_add[ $epo['section'] ] =$_ta;
 							} else {
-								$_ta                            =array();
-								$_ta[$epo['name']]              =array( $epo['value'] );
-								$_items_to_add[$epo['section']] =$_ta;
+								$_ta                              =array();
+								$_ta[ $epo['name'] ]              =array( $epo['value'] );
+								$_items_to_add[ $epo['section'] ] =$_ta;
 							}
-							$_unique_elements_added[$epo['section']] =$epo['section'];
+							$_unique_elements_added[ $epo['section'] ] =$epo['section'];
 						}
 					}
 				}
