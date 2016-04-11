@@ -20,7 +20,6 @@ php:
     semicolon_before_closing_php_tag: add
     static_array_index_whitespace: no_space
     string_operator_whitespace: whitespace
-    
     trailing_whitespace: remove
     true_false_casing: lower
     type_cast_casing: lower
@@ -38,3 +37,7 @@ php:
     whitespace_before_function_brace: space
     whitespace_before_function_close: newline
     whitespace_before_function_parentheses: no_space
+
+blacklist:
+    directories:
+        - templates
