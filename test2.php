@@ -65,10 +65,10 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                 <h3><?php _e('Email Sender Options', WebinarSysteem::$lang_slug); ?></h3>
                                 <table class="form-table">                                    
                                     <tr>
-                                        <th><label for="SentFrom"><?php _e('"From" Name', WebinarSysteem::$lang_slug); ?></label></th><td><input id="SentFrom" name="_wswebinar_email_sentFrom" class="regular-text" type="text" placeholder="<?php _e('Sender name', WebinarSysteem::$lang_slug) ?>" value="<?php echo get_option('_wswebinar_email_sentFrom'); ?>"/></td>
+                                        <th><label for="SentFrom"><?php _e('"From" Name', WebinarSysteem::$lang_slug); ?></label></th><td><input id="SentFrom" name="_wswebinar_email_sentFrom" class="regular-text" type="text" placeholder="<?php _e('Sender name', WebinarSysteem::$lang_slug); ?>" value="<?php echo get_option('_wswebinar_email_sentFrom'); ?>"/></td>
                                     </tr>
                                     <tr>
-                                        <th><label for="SenderEmailAddress"><?php _e('"From" Email Address', WebinarSysteem::$lang_slug); ?></label></th><td><input id="SenderEmailAddress" class="regular-text" name="_wswebinar_email_senderAddress" type="email" placeholder="<?php _e('Sender email', WebinarSysteem::$lang_slug) ?>" value="<?php echo get_option('_wswebinar_email_senderAddress'); ?>"/></td>
+                                        <th><label for="SenderEmailAddress"><?php _e('"From" Email Address', WebinarSysteem::$lang_slug); ?></label></th><td><input id="SenderEmailAddress" class="regular-text" name="_wswebinar_email_senderAddress" type="email" placeholder="<?php _e('Sender email', WebinarSysteem::$lang_slug); ?>" value="<?php echo get_option('_wswebinar_email_senderAddress'); ?>"/></td>
                                     </tr>
                                 </table>
 
@@ -79,7 +79,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                             <label for="HeaderImg"><?php _e('Header Image', WebinarSysteem::$lang_slug); ?></label>
                                         </th>
                                         <td>
-                                            <input type="text" name="_wswebinar_email_headerImg" id="email_headerImg" class="regular-text" value="<?php echo get_option('_wswebinar_email_headerImg') ?>">
+                                            <input type="text" name="_wswebinar_email_headerImg" id="email_headerImg" class="regular-text" value="<?php echo get_option('_wswebinar_email_headerImg'); ?>">
                                             <button class="button wswebinar_uploader" resultId="email_headerImg" uploader_title="Header Image for Mails"><?php _e('Upload', WebinarSysteem::$lang_slug); ?></button>
                                             <div class="webinar_clear_fix"></div>
                                         </td>
@@ -89,7 +89,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                             <label for="EmailFooterTxt"><?php _e('Email Footer Text', WebinarSysteem::$lang_slug); ?></label>
                                         </th>
                                         <td>
-                                            <textarea id="EmailFooterTxt" class="large-text" name="_wswebinar_email_footerTxt" placeholder="<?php _e('Footer Text', WebinarSysteem::$lang_slug) ?>"><?php echo get_option('_wswebinar_email_footerTxt'); ?></textarea>
+                                            <textarea id="EmailFooterTxt" class="large-text" name="_wswebinar_email_footerTxt" placeholder="<?php _e('Footer Text', WebinarSysteem::$lang_slug); ?>"><?php echo get_option('_wswebinar_email_footerTxt'); ?></textarea>
                                         </td>
                                     </tr>
                                     <tr>
@@ -140,17 +140,17 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                 <h3><?php _e('New Registration Options', WebinarSysteem::$lang_slug); ?></h3>
                                 <table class="form-table">                                    
                                     <tr>
-                                        <th><label for="AdminEmailAddress"><?php _e('Admin Email Address', WebinarSysteem::$lang_slug); ?></label></th><td><input id="AdminEmailAddress" class="regular-text" name="_wswebinar_AdminEmailAddress" type="email" placeholder="<?php _e('Admin email', WebinarSysteem::$lang_slug) ?>" value="<?php echo get_option('_wswebinar_AdminEmailAddress'); ?>"/></td>
+                                        <th><label for="AdminEmailAddress"><?php _e('Admin Email Address', WebinarSysteem::$lang_slug); ?></label></th><td><input id="AdminEmailAddress" class="regular-text" name="_wswebinar_AdminEmailAddress" type="email" placeholder="<?php _e('Admin email', WebinarSysteem::$lang_slug); ?>" value="<?php echo get_option('_wswebinar_AdminEmailAddress'); ?>"/></td>
                                     </tr>
                                 </table>
-                                <?php submit_button() ?>
+                                <?php submit_button(); ?>
                             </div>
                             <div class="email-customTab ws-hide-nav-tabs" id="customTab3">
                                 <h3><?php _e('Reminder day before Webinar ', WebinarSysteem::$lang_slug); ?></h3>
                                 <table class="form-table">
                                     <tr>
                                         <th>
-                                            <label for="24hrb4-enable"><?php _e('Enable this reminder?', WebinarSysteem::$lang_slug) ?></label>
+                                            <label for="24hrb4-enable"><?php _e('Enable this reminder?', WebinarSysteem::$lang_slug); ?></label>
                                         </th>
                                         <td>
                                             <input id="24hrb4-enable" data-switch="true" type="checkbox" name="_wswebinar_24hrb4enable" <?php echo (get_option('_wswebinar_24hrb4enable') == 'on' ? 'checked' : ''); ?>/>
@@ -161,7 +161,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                             <label for="24hrb4subject"><?php _e('Subject', WebinarSysteem::$lang_slug); ?></label>
                                         </th>
                                         <td>
-                                            <input id="24hrb4subject" class="regular-text" name="_wswebinar_24hrb4subject"  placeholder="<?php _e('Email Head', WebinarSysteem::$lang_slug) ?>" value="<?php echo get_option('_wswebinar_24hrb4subject'); ?>"/>
+                                            <input id="24hrb4subject" class="regular-text" name="_wswebinar_24hrb4subject"  placeholder="<?php _e('Email Head', WebinarSysteem::$lang_slug); ?>" value="<?php echo get_option('_wswebinar_24hrb4subject'); ?>"/>
                                         </td>
                                     </tr>
                                     <tr>
@@ -188,11 +188,11 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                         <th>&nbsp;</th>
                                         <?php
                                         $posts = query_posts(array('post_type' => 'wswebinars'));
-                                        if (!empty($posts)):
+                                        if (!empty($posts)):;
                                             ?>
                                             <td>
-                                                <input type="email" class="regular-text preview-email-textbox" placeholder="<?php _e('Your email address', WebinarSysteem::$lang_slug) ?>" data-mail-type="_wswebinar_24hrb4"/>
-                                                <input type="button" value="<?php _e('Send Preview', WebinarSysteem::$lang_slug) ?>" id="submit" class="button button-primary" data-mail-type="_wswebinar_24hrb4">
+                                                <input type="email" class="regular-text preview-email-textbox" placeholder="<?php _e('Your email address', WebinarSysteem::$lang_slug); ?>" data-mail-type="_wswebinar_24hrb4"/>
+                                                <input type="button" value="<?php _e('Send Preview', WebinarSysteem::$lang_slug); ?>" id="submit" class="button button-primary" data-mail-type="_wswebinar_24hrb4">
                                                 <p>Please use a different email address than your website admin email address</p>
                                             </td>
                                         <?php else: ?>
@@ -226,7 +226,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                             <label for="1hrb4subject"><?php _e('Subject', WebinarSysteem::$lang_slug); ?></label>
                                         </th>
                                         <td>
-                                            <input id="1hrb4subject" class="regular-text" name="_wswebinar_1hrb4subject"  placeholder="<?php _e('Email Head', WebinarSysteem::$lang_slug) ?>" value="<?php echo get_option('_wswebinar_1hrb4subject'); ?>"/>
+                                            <input id="1hrb4subject" class="regular-text" name="_wswebinar_1hrb4subject"  placeholder="<?php _e('Email Head', WebinarSysteem::$lang_slug); ?>" value="<?php echo get_option('_wswebinar_1hrb4subject'); ?>"/>
                                         </td>
                                     </tr>
                                     <tr>
@@ -251,10 +251,10 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                     </tr>
                                     <tr>
                                         <th>&nbsp;</th>
-                                        <?php if (!empty($posts)): ?>
+                                        <?php if (!empty($posts)):; ?>
                                             <td>
-                                                <input class="regular-text preview-email-textbox" placeholder="<?php _e('Your email address', WebinarSysteem::$lang_slug) ?>" data-mail-type="_wswebinar_1hrb4" type="email" />
-                                                <input type="button" value="<?php _e('Send Preview', WebinarSysteem::$lang_slug) ?>" id="submit" class="button button-primary" data-mail-type="_wswebinar_1hrb4">
+                                                <input class="regular-text preview-email-textbox" placeholder="<?php _e('Your email address', WebinarSysteem::$lang_slug); ?>" data-mail-type="_wswebinar_1hrb4" type="email" />
+                                                <input type="button" value="<?php _e('Send Preview', WebinarSysteem::$lang_slug); ?>" id="submit" class="button button-primary" data-mail-type="_wswebinar_1hrb4">
                                                 <p>Please use a different email address than your website admin email address</p>
                                             </td>
                                         <?php else: ?>
@@ -287,7 +287,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                             <label for="wbnstartedsubject"><?php _e('Subject', WebinarSysteem::$lang_slug); ?></label>
                                         </th>
                                         <td>
-                                            <input id="wbnstartedsubject" class="regular-text" name="_wswebinar_wbnstartedsubject" placeholder="<?php _e('Email Head', WebinarSysteem::$lang_slug) ?>" value="<?php echo get_option('_wswebinar_wbnstartedsubject'); ?>"/>
+                                            <input id="wbnstartedsubject" class="regular-text" name="_wswebinar_wbnstartedsubject" placeholder="<?php _e('Email Head', WebinarSysteem::$lang_slug); ?>" value="<?php echo get_option('_wswebinar_wbnstartedsubject'); ?>"/>
                                         </td>
                                     </tr>
                                     <tr>
@@ -312,10 +312,10 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                     </tr>
                                     <tr>
                                         <th>&nbsp;</th>
-                                        <?php if (!empty($posts)): ?>
+                                        <?php if (!empty($posts)):; ?>
                                             <td>
-                                                <input class="regular-text preview-email-textbox" placeholder="<?php _e('Your email address', WebinarSysteem::$lang_slug) ?>" data-mail-type="_wswebinar_wbnstarted" type="email" />
-                                                <input type="button" value="<?php _e('Send Preview', WebinarSysteem::$lang_slug) ?>" id="submit" class="button button-primary" data-mail-type="_wswebinar_wbnstarted">
+                                                <input class="regular-text preview-email-textbox" placeholder="<?php _e('Your email address', WebinarSysteem::$lang_slug); ?>" data-mail-type="_wswebinar_wbnstarted" type="email" />
+                                                <input type="button" value="<?php _e('Send Preview', WebinarSysteem::$lang_slug); ?>" id="submit" class="button button-primary" data-mail-type="_wswebinar_wbnstarted">
                                                 <p>Please use a different email address than your website admin email address</p>
                                             </td>
                                         <?php else: ?>
@@ -348,7 +348,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                             <label for="wbnreplaysubject"><?php _e('Subject', WebinarSysteem::$lang_slug); ?></label>
                                         </th>
                                         <td>
-                                            <input id="wbnreplaysubject" class="regular-text" name="_wswebinar_wbnreplaysubject" placeholder="<?php _e('Email Head', WebinarSysteem::$lang_slug) ?>" value="<?php echo get_option('_wswebinar_wbnreplaysubject'); ?>"/>
+                                            <input id="wbnreplaysubject" class="regular-text" name="_wswebinar_wbnreplaysubject" placeholder="<?php _e('Email Head', WebinarSysteem::$lang_slug); ?>" value="<?php echo get_option('_wswebinar_wbnreplaysubject'); ?>"/>
                                         </td>
                                     </tr>
                                     <tr>
@@ -373,10 +373,10 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                     </tr>
                                     <tr>
                                         <th>&nbsp;</th>
-                                        <?php if (!empty($posts)): ?>
+                                        <?php if (!empty($posts)):; ?>
                                             <td>
-                                                <input class="regular-text preview-email-textbox" placeholder="<?php _e('Your email address', WebinarSysteem::$lang_slug) ?>" data-mail-type="_wswebinar_wbnreplay" type="email" />
-                                                <input type="button" value="<?php _e('Send Preview', WebinarSysteem::$lang_slug) ?>" id="submit" class="button button-primary" data-mail-type="_wswebinar_wbnreplay">
+                                                <input class="regular-text preview-email-textbox" placeholder="<?php _e('Your email address', WebinarSysteem::$lang_slug); ?>" data-mail-type="_wswebinar_wbnreplay" type="email" />
+                                                <input type="button" value="<?php _e('Send Preview', WebinarSysteem::$lang_slug); ?>" id="submit" class="button button-primary" data-mail-type="_wswebinar_wbnreplay">
                                                 <p>Please use a different email address than your website admin email address</p>
                                             </td>
                                         <?php else: ?>
@@ -415,7 +415,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                     <th><?php _e('Create Webinars', WebinarSysteem::$lang_slug); ?></th>
                                     <?php foreach ($roles as $roleSlug => $roleName) { ?>
                                         <td>
-                                            <input type="checkbox" name="_wswebinar_createwebinars_<?php echo $roleSlug ?>" 
+                                            <input type="checkbox" name="_wswebinar_createwebinars_<?php echo $roleSlug; ?>" 
                                             <?php
                                             $option1 = get_option('_wswebinar_createwebinars_' . $roleSlug);
                                             $status1 = empty($option1) ? '' : 'checked';
@@ -428,7 +428,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                     <th><?php _e('Manage Subscribers', WebinarSysteem::$lang_slug); ?></th>
                                     <?php foreach ($roles as $roleSlug => $roleName) { ?>
                                         <td>
-                                            <input type="checkbox" name="_wswebinar_managesubscribers_<?php echo $roleSlug ?>" 
+                                            <input type="checkbox" name="_wswebinar_managesubscribers_<?php echo $roleSlug; ?>" 
                                             <?php
                                             $option2 = get_option('_wswebinar_managesubscribers_' . $roleSlug);
                                             $status2 = empty($option2) ? '' : 'checked';
@@ -441,7 +441,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                     <th><?php _e('Change WebinarSystem Settings', WebinarSysteem::$lang_slug); ?></th>
                                     <?php foreach ($roles as $roleSlug => $roleName) { ?>
                                         <td>
-                                            <input type="checkbox" name="_wswebinar_changesettings_<?php echo $roleSlug ?>" 
+                                            <input type="checkbox" name="_wswebinar_changesettings_<?php echo $roleSlug; ?>" 
                                             <?php
                                             $option3 = get_option('_wswebinar_changesettings_' . $roleSlug);
                                             $status3 = empty($option3) ? '' : 'checked';
@@ -528,7 +528,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                 </tr>
                                 <tr data-info='WordPress Environment'>
                                     <th><?php _e('Language', WebinarSysteem::$lang_slug); ?></th>
-                                    <td><?php echo get_locale() ?></td>
+                                    <td><?php echo get_locale(); ?></td>
                                 </tr>
 
                             </table>
