@@ -31,8 +31,8 @@ class WebinarSysteemOptions extends WebinarSysteem {
             <form action="options.php" method="post">                    
                         <h2 class="nav-tab-wrapper">
                             <a class="nav-tab nav-tab-active" href="#tabs-1"><?php _e('General', WebinarSysteem::$lang_slug); ?></a>
-                            <a class="nav-tab" href="#tabs-2"><?php _e ('Emails', WebinarSysteem::$lang_slug); ?></a>    
-                            <a class="nav-tab" href="#tabs-4"><?php _e ('Advanced', WebinarSysteem::$lang_slug); ?></a>
+                            <a class="nav-tab" href="#tabs-2"><?php _e('Emails', WebinarSysteem::$lang_slug); ?></a>    
+                            <a class="nav-tab" href="#tabs-4"><?php _e('Advanced', WebinarSysteem::$lang_slug); ?></a>
                             <a class="nav-tab" href="#tabs-5"><?php _e('System Status', WebinarSysteem::$lang_slug); ?></a>
                         </h2>
                     <div id="tabs-1" class="nav-tab-content">
