@@ -806,13 +806,13 @@ class WebinarSysteemOptions extends WebinarSysteem {
             update_option('_wswebinar_email_bodyBck', '#fff');
             update_option('_wswebinar_email_bodyTXT', 'black');
             update_option('_wswebinar_email_footerTxt', '');
-        } elseif ($setting == "1hr") {
+        } elseif ($setting == '1hr') {
             update_option(WebinarSysteem::$lang_slug . '_1hrb4content', $template['1hr']);
-        } elseif ($setting == "24hr") {
+        } elseif ($setting == '24hr') {
             update_option(WebinarSysteem::$lang_slug . '_24hrb4content', $template['24hr']);
-        } elseif ($setting == "started") {
+        } elseif ($setting == 'started') {
             update_option(WebinarSysteem::$lang_slug . '_wbnstarted', $template['started']);
-        } elseif ($setting == "replay") {
+        } elseif ($setting == 'replay') {
             update_option(WebinarSysteem::$lang_slug . '_wbnreplay', $template['replay']);
         }
     }
