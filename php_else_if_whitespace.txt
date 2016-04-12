@@ -1,0 +1,13 @@
+Array
+(
+    [blacklist] => Array
+        (
+            [directories] => Array
+                (
+                    [0] => templates
+                )
+
+        )
+
+    [php_else_if_whitespace] => no_space
+)
