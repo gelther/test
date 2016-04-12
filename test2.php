@@ -10,6 +10,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
     private $localkey_statuss;;
 
     function __construct($localkey_status) {
+
         $this->localkey_statuss = $localkey_status;
         parent::setAttributes();
     }
@@ -798,6 +799,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
     }
 
     public static function DoResetDefaults($setting = NULL) {
+
         $template = WebinarSysteem::getDefaultMailTemplates();
         if ($setting == NULL) {
             update_option('_wswebinar_email_headerImg', plugins_url('images/WebinarSysteem-logo.png', __FILE__));
