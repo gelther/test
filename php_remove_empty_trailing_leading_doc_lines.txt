@@ -1,0 +1,14 @@
+Array
+(
+    [blacklist] => Array
+        (
+            [directories] => Array
+                (
+                    [0] => templates
+                )
+
+        )
+
+    [php_remove_double_semicolon] => remove
+    [php_remove_empty_trailing_leading_doc_lines] => remove
+)
