@@ -1,5 +1,5 @@
 <?php
-/*
+/**
  * 
  * Webinar General Settings page.
  * 
@@ -7,7 +7,7 @@
 
 class WebinarSysteemOptions extends WebinarSysteem {
 
-    private $localkey_statuss;;
+    private $localkey_statuss;
 
     function __construct($localkey_status) {
         $this->localkey_statuss = $localkey_status;
@@ -17,8 +17,8 @@ class WebinarSysteemOptions extends WebinarSysteem {
     public function wbn_gengeral_settings() {
 
         if (isset($_GET['reset']) && !isset($_GET['settings-updated'])):
-            $setting = isset($_GET['setting']) ? $_GET['setting'] : NULL;;
-            WebinarSysteemOptions::DoResetDefaults($setting);;;
+            $setting = isset($_GET['setting']) ? $_GET['setting'] : NULL;
+            WebinarSysteemOptions::DoResetDefaults($setting);
         endif;
         ?>
 
@@ -520,10 +520,12 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                 <tr data-info='WordPress Environment'>
                                     <th><?php _e('WP Debug mode', WebinarSysteem::$lang_slug); ?></th>
                                     <td><?php
-                                        if (defined('WP_DEBUG') && WP_DEBUG)
+                                        if (defined('WP_DEBUG') && WP_DEBUG) {
                                             echo 'Enabled';
-                                        else
+                                        }
+                                        else {
                                             echo 'Disabled';
+                                        }
                                         ?></td>
                                 </tr>
                                 <tr data-info='WordPress Environment'>
@@ -788,7 +790,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
             
             
 
-            /*
+            /**
              * Check enormail API key
              */
 
