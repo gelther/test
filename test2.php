@@ -12,6 +12,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
     function __construct($localkey_status) {
         $this->localkey_statuss = $localkey_status;
         parent::setAttributes();
+
     }
 
     public function wbn_gengeral_settings() {
@@ -795,6 +796,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
 
         </script>
         <?php
+
     }
 
     public static function DoResetDefaults($setting = NULL) {
@@ -815,6 +817,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
         } elseif ($setting == "replay") {
             update_option(WebinarSysteem::$lang_slug . '_wbnreplay', $template['replay']);
         }
+
     }
 
 }
