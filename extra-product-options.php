@@ -58,7 +58,7 @@ add_filter( 'woocommerce_order_get_items', 'tm_woocommerce_order_get_items', 10,
 								&& $_current_currency_prices!==''
 								&& is_array( $_current_currency_prices )
 								&& isset( $_current_currency_prices[ $mt_prefix ] )
-								&& $_current_currency_prices[ $mt_prefix ]!='' ){
+								&& $_current_currency_prices[ $mt_prefix ]!='' ) {
 
 							$new_currency = true;
 							$epo['price'] = $_current_currency_prices[ $mt_prefix ];
