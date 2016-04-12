@@ -195,7 +195,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                                 <input type="button" value="<?php _e('Send Preview', WebinarSysteem::$lang_slug) ?>" id="submit" class="button button-primary" data-mail-type="_wswebinar_24hrb4">
                                                 <p>Please use a different email address than your website admin email address</p>
                                             </td>
-                                        <?php else: ?>
+                                        <?php else : ?>
                                             <td><?php _e('Add a Webinar to send a preview email.', WebinarSysteem::$lang_slug); ?></td>
                                         <?php endif; ?>
                                     </tr>
@@ -257,7 +257,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                                 <input type="button" value="<?php _e('Send Preview', WebinarSysteem::$lang_slug) ?>" id="submit" class="button button-primary" data-mail-type="_wswebinar_1hrb4">
                                                 <p>Please use a different email address than your website admin email address</p>
                                             </td>
-                                        <?php else: ?>
+                                        <?php else : ?>
                                             <td><?php _e('Add a Webinar to send a preview email.', WebinarSysteem::$lang_slug); ?></td>
                                         <?php endif; ?>
                                     </tr>
@@ -318,7 +318,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                                 <input type="button" value="<?php _e('Send Preview', WebinarSysteem::$lang_slug) ?>" id="submit" class="button button-primary" data-mail-type="_wswebinar_wbnstarted">
                                                 <p>Please use a different email address than your website admin email address</p>
                                             </td>
-                                        <?php else: ?>
+                                        <?php else : ?>
                                             <td><?php _e('Add a Webinar to send a preview email.', WebinarSysteem::$lang_slug); ?></td>
                                         <?php endif; ?>
                                     </tr>
@@ -379,7 +379,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                                 <input type="button" value="<?php _e('Send Preview', WebinarSysteem::$lang_slug) ?>" id="submit" class="button button-primary" data-mail-type="_wswebinar_wbnreplay">
                                                 <p>Please use a different email address than your website admin email address</p>
                                             </td>
-                                        <?php else: ?>
+                                        <?php else : ?>
                                             <td><?php _e('Add a Webinar to send a preview email.', WebinarSysteem::$lang_slug); ?></td>
                                         <?php endif; ?>
                                     </tr>
