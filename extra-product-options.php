@@ -6,11 +6,11 @@ add_filter( 'woocommerce_order_get_items', 'tm_woocommerce_order_get_items', 10,
 	function tm_woocommerce_order_get_items( $items=array(), $order=false ) {
 
 		if ( ! is_array( $items ) || defined( 'TM_IS_SUBSCRIPTIONS_RENEWAL' ) || ($this->tm_epo_global_prevent_options_from_emails=='yes') ) {
-			return $items;;
+			return $items;
 		}
 
 		$order_currency = $order->get_order_currency();
-		$mt_prefix      = $order_currency;;
+		$mt_prefix      = $order_currency;
 
 		foreach ( $items as $item_id => $item ) {
 			$has_epo = isset( $item['item_meta'] ) && isset( $item['item_meta']['_tmcartepo_data'] ) && isset( $item['item_meta']['_tmcartepo_data'][0] );
