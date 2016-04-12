@@ -6,11 +6,11 @@ add_filter( 'woocommerce_order_get_items', 'tm_woocommerce_order_get_items', 10,
 	function tm_woocommerce_order_get_items( $items=array(), $order=false ) {
 
 		if ( ! is_array( $items ) || defined( 'TM_IS_SUBSCRIPTIONS_RENEWAL' ) || ($this->tm_epo_global_prevent_options_from_emails=='yes') ) {
-			return $items;;
+			return $items;
 		}
 
 		$order_currency = $order->get_order_currency();
-		$mt_prefix      = $order_currency;;
+		$mt_prefix      = $order_currency;
 
 		foreach ( $items as $item_id => $item ) {
 			$has_epo = isset( $item['item_meta'] ) && isset( $item['item_meta']['_tmcartepo_data'] ) && isset( $item['item_meta']['_tmcartepo_data'][0] );
@@ -58,7 +58,7 @@ add_filter( 'woocommerce_order_get_items', 'tm_woocommerce_order_get_items', 10,
 								&& $_current_currency_prices!==''
 								&& is_array( $_current_currency_prices )
 								&& isset( $_current_currency_prices[ $mt_prefix ] )
-								&& $_current_currency_prices[ $mt_prefix ]!='' ){
+								&& $_current_currency_prices[ $mt_prefix ]!='' ) {
 
 							$new_currency = true;
 							$epo['price'] = $_current_currency_prices[ $mt_prefix ];
@@ -131,7 +131,7 @@ add_filter( 'woocommerce_order_get_items', 'tm_woocommerce_order_get_items', 10,
 							$value =implode( ',', $value );
 						}
 						$items[ $item_id ]['item_meta'][ $key ][]                                             = $value;
-						$items[ $item_id ]['item_meta_array'][ count( $items[$item_id]['item_meta_array'] ) ] = (object) array( 'key' => $key, 'value' => $value );
+						$items[ $item_id ]['item_meta_array'][ count( $items[ $item_id ]['item_meta_array'] ) ] = (object) array( 'key' => $key, 'value' => $value );
 					}
 				}
 			}
@@ -139,3 +139,5 @@ add_filter( 'woocommerce_order_get_items', 'tm_woocommerce_order_get_items', 10,
 		return $items;
 
 	}
+
+
