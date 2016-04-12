@@ -7,7 +7,7 @@
 
 class WebinarSysteemOptions extends WebinarSysteem {
 
-    private $localkey_statuss;;
+    private $localkey_statuss;
 
     function __construct($localkey_status) {
         $this->localkey_statuss = $localkey_status;
@@ -17,8 +17,8 @@ class WebinarSysteemOptions extends WebinarSysteem {
     public function wbn_gengeral_settings() {
 
         if (isset($_GET['reset']) && !isset($_GET['settings-updated'])):
-            $setting = isset($_GET['setting']) ? $_GET['setting'] : NULL;;
-            WebinarSysteemOptions::DoResetDefaults($setting);;;
+            $setting = isset($_GET['setting']) ? $_GET['setting'] : NULL;
+            WebinarSysteemOptions::DoResetDefaults($setting);
         endif;
         ?>
 
@@ -178,7 +178,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                         </th>
                                         <td>
                                             <?php
-                                            $meta = get_option('_wswebinar_24hrb4content');
+                                            $meta    = get_option('_wswebinar_24hrb4content');
                                             $content = apply_filters('meta_content', $meta);
                                             wp_editor($content, '_wswebinar_24hrb4content');
                                             ?>
@@ -243,7 +243,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                         </th>
                                         <td>
                                             <?php
-                                            $meta = get_option('_wswebinar_1hrb4content');
+                                            $meta    = get_option('_wswebinar_1hrb4content');
                                             $content = apply_filters('meta_content', $meta);
                                             wp_editor($content, '_wswebinar_1hrb4content');
                                             ?>
@@ -304,7 +304,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                         </th>
                                         <td>
                                             <?php
-                                            $meta = get_option('_wswebinar_wbnstarted');
+                                            $meta    = get_option('_wswebinar_wbnstarted');
                                             $content = apply_filters('meta_content', $meta);
                                             wp_editor($content, '_wswebinar_wbnstarted');
                                             ?>
@@ -365,7 +365,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                         </th>
                                         <td>
                                             <?php
-                                            $meta = get_option('_wswebinar_wbnreplay');
+                                            $meta    = get_option('_wswebinar_wbnreplay');
                                             $content = apply_filters('meta_content', $meta);
                                             wp_editor($content, '_wswebinar_wbnreplay');
                                             ?>
