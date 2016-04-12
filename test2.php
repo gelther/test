@@ -14,6 +14,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
         parent::setAttributes();
     }
 
+
     public function wbn_gengeral_settings() {
 
         if (isset($_GET['reset']) && !isset($_GET['settings-updated'])):
@@ -797,6 +798,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
         <?php
     }
 
+
     public static function DoResetDefaults($setting = NULL) {
         $template = WebinarSysteem::getDefaultMailTemplates();
         if ($setting == NULL) {
@@ -816,5 +818,6 @@ class WebinarSysteemOptions extends WebinarSysteem {
             update_option(WebinarSysteem::$lang_slug . '_wbnreplay', $template['replay']);
         }
     }
+
 
 }
