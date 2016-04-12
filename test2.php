@@ -7,7 +7,7 @@
 
 class WebinarSysteemOptions extends WebinarSysteem {
 
-    private $localkey_statuss;
+    private $localkey_statuss;;
 
     function __construct($localkey_status) {
         $this->localkey_statuss = $localkey_status;
@@ -17,8 +17,8 @@ class WebinarSysteemOptions extends WebinarSysteem {
     public function wbn_gengeral_settings() {
 
         if (isset($_GET['reset']) && !isset($_GET['settings-updated'])):
-            $setting = isset($_GET['setting']) ? $_GET['setting'] : NULL;
-            WebinarSysteemOptions::DoResetDefaults($setting);
+            $setting = isset($_GET['setting']) ? $_GET['setting'] : NULL;;
+            WebinarSysteemOptions::DoResetDefaults($setting);;;
         endif;
         ?>
 
@@ -33,8 +33,8 @@ class WebinarSysteemOptions extends WebinarSysteem {
             <form action="options.php" method="post">                    
                         <h2 class="nav-tab-wrapper">
                             <a class="nav-tab nav-tab-active" href="#tabs-1"><?php _e('General', WebinarSysteem::$lang_slug); ?></a>
-                            <a class="nav-tab" href="#tabs-2"><?php _e('Emails', WebinarSysteem::$lang_slug); ?></a>    
-                            <a class="nav-tab" href="#tabs-4"><?php _e('Advanced', WebinarSysteem::$lang_slug); ?></a>
+                            <a class="nav-tab" href="#tabs-2"><?php _e ('Emails', WebinarSysteem::$lang_slug); ?></a>    
+                            <a class="nav-tab" href="#tabs-4"><?php _e ('Advanced', WebinarSysteem::$lang_slug); ?></a>
                             <a class="nav-tab" href="#tabs-5"><?php _e('System Status', WebinarSysteem::$lang_slug); ?></a>
                         </h2>
                     <div id="tabs-1" class="nav-tab-content">
