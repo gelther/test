@@ -99,7 +99,7 @@ add_filter( 'woocommerce_order_get_items', 'tm_woocommerce_order_get_items', 10,
 							$epo['value'] =strip_tags( $epo['value'] );
 						} else {
 							if ( ! empty( $epo['images'] ) && $this->tm_epo_show_image_replacement=='yes' ) {
-								$display_value ='<span class="cpf-img-on-cart"><img alt="" class="attachment-shop_thumbnail wp-post-image epo-option-image" src="' .
+								$display_value ='<span class="cpf-img-on-cart"><img alt="" class="attachment-shop_thumbnail wp-post-image epo-option-image" src="' . 
 												apply_filters( 'tm_image_url', $epo['images'] ) . '" /></span>';
 								$epo['value'] =$display_value . $epo['value'];
 							}
