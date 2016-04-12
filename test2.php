@@ -7,20 +7,20 @@
 
 class WebinarSysteemOptions extends WebinarSysteem {
 
-    private $localkey_statuss;;
+	private $localkey_statuss;
 
-    function __construct($localkey_status) {
-        $this->localkey_statuss = $localkey_status;
-        parent::setAttributes();
-    }
+	function __construct($localkey_status) {
+		$this->localkey_statuss = $localkey_status;
+		parent::setAttributes();
+	}
 
-    public function wbn_gengeral_settings() {
+	public function wbn_gengeral_settings() {
 
-        if (isset($_GET['reset']) && !isset($_GET['settings-updated'])):
-            $setting = isset($_GET['setting']) ? $_GET['setting'] : NULL;;
-            WebinarSysteemOptions::DoResetDefaults($setting);;;
-        endif;
-        ?>
+		if (isset($_GET['reset']) && !isset($_GET['settings-updated'])):
+			$setting = isset($_GET['setting']) ? $_GET['setting'] : NULL;
+			WebinarSysteemOptions::DoResetDefaults($setting);
+		endif;
+		?>
 
 
 
@@ -33,8 +33,8 @@ class WebinarSysteemOptions extends WebinarSysteem {
             <form action="options.php" method="post">                    
                         <h2 class="nav-tab-wrapper">
                             <a class="nav-tab nav-tab-active" href="#tabs-1"><?php _e('General', WebinarSysteem::$lang_slug); ?></a>
-                            <a class="nav-tab" href="#tabs-2"><?php _e ('Emails', WebinarSysteem::$lang_slug); ?></a>    
-                            <a class="nav-tab" href="#tabs-4"><?php _e ('Advanced', WebinarSysteem::$lang_slug); ?></a>
+                            <a class="nav-tab" href="#tabs-2"><?php _e('Emails', WebinarSysteem::$lang_slug); ?></a>    
+                            <a class="nav-tab" href="#tabs-4"><?php _e('Advanced', WebinarSysteem::$lang_slug); ?></a>
                             <a class="nav-tab" href="#tabs-5"><?php _e('System Status', WebinarSysteem::$lang_slug); ?></a>
                         </h2>
                     <div id="tabs-1" class="nav-tab-content">
@@ -178,24 +178,24 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                         </th>
                                         <td>
                                             <?php
-                                            $meta = get_option('_wswebinar_24hrb4content');
-                                            $content = apply_filters('meta_content', $meta);
-                                            wp_editor($content, '_wswebinar_24hrb4content');
-                                            ?>
+											$meta    = get_option('_wswebinar_24hrb4content');
+											$content = apply_filters('meta_content', $meta);
+											wp_editor($content, '_wswebinar_24hrb4content');
+											?>
                                         </td>
                                     </tr>
                                     <tr>
                                         <th>&nbsp;</th>
                                         <?php
-                                        $posts = query_posts(array('post_type' => 'wswebinars'));
-                                        if (!empty($posts)):
-                                            ?>
+										$posts = query_posts(array('post_type' => 'wswebinars'));
+										if (!empty($posts)):
+											?>
                                             <td>
                                                 <input type="email" class="regular-text preview-email-textbox" placeholder="<?php _e('Your email address', WebinarSysteem::$lang_slug) ?>" data-mail-type="_wswebinar_24hrb4"/>
                                                 <input type="button" value="<?php _e('Send Preview', WebinarSysteem::$lang_slug) ?>" id="submit" class="button button-primary" data-mail-type="_wswebinar_24hrb4">
                                                 <p>Please use a different email address than your website admin email address</p>
                                             </td>
-                                        <?php else: ?>
+                                        <?php else : ?>
                                             <td><?php _e('Add a Webinar to send a preview email.', WebinarSysteem::$lang_slug); ?></td>
                                         <?php endif; ?>
                                     </tr>
@@ -243,10 +243,10 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                         </th>
                                         <td>
                                             <?php
-                                            $meta = get_option('_wswebinar_1hrb4content');
-                                            $content = apply_filters('meta_content', $meta);
-                                            wp_editor($content, '_wswebinar_1hrb4content');
-                                            ?>
+											$meta    = get_option('_wswebinar_1hrb4content');
+											$content = apply_filters('meta_content', $meta);
+											wp_editor($content, '_wswebinar_1hrb4content');
+											?>
                                         </td>
                                     </tr>
                                     <tr>
@@ -257,7 +257,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                                 <input type="button" value="<?php _e('Send Preview', WebinarSysteem::$lang_slug) ?>" id="submit" class="button button-primary" data-mail-type="_wswebinar_1hrb4">
                                                 <p>Please use a different email address than your website admin email address</p>
                                             </td>
-                                        <?php else: ?>
+                                        <?php else : ?>
                                             <td><?php _e('Add a Webinar to send a preview email.', WebinarSysteem::$lang_slug); ?></td>
                                         <?php endif; ?>
                                     </tr>
@@ -304,10 +304,10 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                         </th>
                                         <td>
                                             <?php
-                                            $meta = get_option('_wswebinar_wbnstarted');
-                                            $content = apply_filters('meta_content', $meta);
-                                            wp_editor($content, '_wswebinar_wbnstarted');
-                                            ?>
+											$meta    = get_option('_wswebinar_wbnstarted');
+											$content = apply_filters('meta_content', $meta);
+											wp_editor($content, '_wswebinar_wbnstarted');
+											?>
                                         </td>
                                     </tr>
                                     <tr>
@@ -318,7 +318,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                                 <input type="button" value="<?php _e('Send Preview', WebinarSysteem::$lang_slug) ?>" id="submit" class="button button-primary" data-mail-type="_wswebinar_wbnstarted">
                                                 <p>Please use a different email address than your website admin email address</p>
                                             </td>
-                                        <?php else: ?>
+                                        <?php else : ?>
                                             <td><?php _e('Add a Webinar to send a preview email.', WebinarSysteem::$lang_slug); ?></td>
                                         <?php endif; ?>
                                     </tr>
@@ -365,10 +365,10 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                         </th>
                                         <td>
                                             <?php
-                                            $meta = get_option('_wswebinar_wbnreplay');
-                                            $content = apply_filters('meta_content', $meta);
-                                            wp_editor($content, '_wswebinar_wbnreplay');
-                                            ?>
+											$meta    = get_option('_wswebinar_wbnreplay');
+											$content = apply_filters('meta_content', $meta);
+											wp_editor($content, '_wswebinar_wbnreplay');
+											?>
                                         </td>
                                     </tr>
                                     <tr>
@@ -379,7 +379,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                                 <input type="button" value="<?php _e('Send Preview', WebinarSysteem::$lang_slug) ?>" id="submit" class="button button-primary" data-mail-type="_wswebinar_wbnreplay">
                                                 <p>Please use a different email address than your website admin email address</p>
                                             </td>
-                                        <?php else: ?>
+                                        <?php else : ?>
                                             <td><?php _e('Add a Webinar to send a preview email.', WebinarSysteem::$lang_slug); ?></td>
                                         <?php endif; ?>
                                     </tr>
@@ -398,9 +398,9 @@ class WebinarSysteemOptions extends WebinarSysteem {
                     <div id="tabs-4"  class="ws-hide-nav-tabs nav-tab-content">
                         <h3><?php _e('Advanced', WebinarSysteem::$lang_slug); ?></h3>
                         <?php
-                        global $wp_roles;
-                        $roles = $wp_roles->get_names();
-                        ?>
+						global $wp_roles;
+						$roles = $wp_roles->get_names();
+						?>
                         <table class="wp-list-table widefat">
                             <thead>
                                 <tr scope="row">
@@ -417,10 +417,10 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                         <td>
                                             <input type="checkbox" name="_wswebinar_createwebinars_<?php echo $roleSlug ?>" 
                                             <?php
-                                            $option1 = get_option('_wswebinar_createwebinars_' . $roleSlug);
-                                            $status1 = empty($option1) ? '' : 'checked';
-                                            echo $roleSlug == 'administrator' ? 'checked disabled' : $status1
-                                            ?>/>
+											$option1 = get_option('_wswebinar_createwebinars_' . $roleSlug);
+											$status1 = empty($option1) ? '' : 'checked';
+											echo $roleSlug == 'administrator' ? 'checked disabled' : $status1
+											?>/>
                                         </td>
                                     <?php } ?>
                                 </tr>
@@ -430,10 +430,10 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                         <td>
                                             <input type="checkbox" name="_wswebinar_managesubscribers_<?php echo $roleSlug ?>" 
                                             <?php
-                                            $option2 = get_option('_wswebinar_managesubscribers_' . $roleSlug);
-                                            $status2 = empty($option2) ? '' : 'checked';
-                                            echo $roleSlug == 'administrator' ? 'checked disabled' : $status2
-                                            ?>/>
+											$option2 = get_option('_wswebinar_managesubscribers_' . $roleSlug);
+											$status2 = empty($option2) ? '' : 'checked';
+											echo $roleSlug == 'administrator' ? 'checked disabled' : $status2
+											?>/>
                                         </td>
                                     <?php } ?>
                                 </tr>
@@ -443,10 +443,10 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                         <td>
                                             <input type="checkbox" name="_wswebinar_changesettings_<?php echo $roleSlug ?>" 
                                             <?php
-                                            $option3 = get_option('_wswebinar_changesettings_' . $roleSlug);
-                                            $status3 = empty($option3) ? '' : 'checked';
-                                            echo $roleSlug == 'administrator' ? 'checked disabled' : $status3
-                                            ?>/>
+											$option3 = get_option('_wswebinar_changesettings_' . $roleSlug);
+											$status3 = empty($option3) ? '' : 'checked';
+											echo $roleSlug == 'administrator' ? 'checked disabled' : $status3
+											?>/>
                                         </td>
                                     <?php } ?>
                                 </tr>
@@ -510,21 +510,21 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                 <tr data-info='WordPress Environment'>
                                     <th><?php _e('WP Multisite', WebinarSysteem::$lang_slug); ?></th>
                                     <td><?php
-                                        if (is_multisite()) {
-                                            echo 'Enabled';
-                                        } else {
-                                            echo 'Disabled';
-                                        }
-                                        ?> </td>
+										if (is_multisite()) {
+											echo 'Enabled';
+										} else {
+											echo 'Disabled';
+										}
+										?> </td>
                                 </tr>
                                 <tr data-info='WordPress Environment'>
                                     <th><?php _e('WP Debug mode', WebinarSysteem::$lang_slug); ?></th>
                                     <td><?php
-                                        if (defined('WP_DEBUG') && WP_DEBUG)
-                                            echo 'Enabled';
-                                        else
-                                            echo 'Disabled';
-                                        ?></td>
+										if (defined('WP_DEBUG') && WP_DEBUG)
+											echo 'Enabled';
+										else
+											echo 'Disabled';
+										?></td>
                                 </tr>
                                 <tr data-info='WordPress Environment'>
                                     <th><?php _e('Language', WebinarSysteem::$lang_slug); ?></th>
@@ -565,14 +565,14 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                     </th>
                                     <td>
                                         <?php
-                                        // Check if phpversion function exists
-                                        if (function_exists('phpversion')) {
-                                            $php_version = phpversion();
-                                            echo esc_html($php_version);
-                                        } else {
-                                            _e("Couldn't determine PHP version because phpversion() doesn't exist.", WebinarSysteem::$lang_slug);
-                                        }
-                                        ?>
+										// Check if phpversion function exists
+										if (function_exists('phpversion')) {
+											$php_version = phpversion();
+											echo esc_html($php_version);
+										} else {
+											_e("Couldn't determine PHP version because phpversion() doesn't exist.", WebinarSysteem::$lang_slug);
+										}
+										?>
                                     </td>
                                 </tr>
 
@@ -614,9 +614,9 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                     </th>
                                     <td>
                                         <?php
-                                        global $wpdb;
-                                        echo $wpdb->db_version();
-                                        ?>
+										global $wpdb;
+										echo $wpdb->db_version();
+										?>
                                     </td>
                                 </tr>
                                 <tr data-info='Server Environment'>
@@ -633,52 +633,52 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                     </th>
                                     <td>
                                         <?php
-                                        $default_timezone = date_default_timezone_get();
-                                        echo $default_timezone . '' . WebinarSysteem::getTimezone();
-                                        ?>
+										$default_timezone = date_default_timezone_get();
+										echo $default_timezone . '' . WebinarSysteem::getTimezone();
+										?>
                                     </td>
                                 </tr>
 
                                 <?php
-                                $posting = array();
+								$posting = array();
 
-                                // fsockopen/cURL
-                                $posting['fsockopen_curl']['name'] = 'fsockopen/cURL';
+								// fsockopen/cURL
+								$posting['fsockopen_curl']['name'] = 'fsockopen/cURL';
 
-                                if (function_exists('fsockopen') || function_exists('curl_init')) {
-                                    $posting['fsockopen_curl']['success'] = true;
-                                } else {
-                                    $posting['fsockopen_curl']['success'] = false;
-                                }
+								if (function_exists('fsockopen') || function_exists('curl_init')) {
+									$posting['fsockopen_curl']['success'] = true;
+								} else {
+									$posting['fsockopen_curl']['success'] = false;
+								}
 
-                                // SOAP
-                                $posting['soap_client']['name'] = 'SoapClient';
+								// SOAP
+								$posting['soap_client']['name'] = 'SoapClient';
 
-                                if (class_exists('SoapClient')) {
-                                    $posting['soap_client']['success'] = true;
-                                } else {
-                                    $posting['soap_client']['success'] = false;
-                                }
+								if (class_exists('SoapClient')) {
+									$posting['soap_client']['success'] = true;
+								} else {
+									$posting['soap_client']['success'] = false;
+								}
 
-                                // DOMDocument
-                                $posting['dom_document']['name'] = 'DOMDocument';
+								// DOMDocument
+								$posting['dom_document']['name'] = 'DOMDocument';
 
-                                if (class_exists('DOMDocument')) {
-                                    $posting['dom_document']['success'] = true;
-                                } else {
-                                    $posting['dom_document']['success'] = false;
-                                }
+								if (class_exists('DOMDocument')) {
+									$posting['dom_document']['success'] = true;
+								} else {
+									$posting['dom_document']['success'] = false;
+								}
 
-                                $posting['gzip']['name'] = 'GZip';
-                                if (is_callable('gzopen')) {
-                                    $posting['gzip']['success'] = true;
-                                } else {
-                                    $posting['gzip']['success'] = false;
-                                }
+								$posting['gzip']['name'] = 'GZip';
+								if (is_callable('gzopen')) {
+									$posting['gzip']['success'] = true;
+								} else {
+									$posting['gzip']['success'] = false;
+								}
 
-                                foreach ($posting as $post) {
-                                    $mark = !empty($post['success']) ? 'Enabled' : 'Disabled';
-                                    ?>
+								foreach ($posting as $post) {
+									$mark = !empty($post['success']) ? 'Enabled' : 'Disabled';
+									?>
                                     <tr data-info='Server Environment'>
                                         <th><?php echo esc_html($post['name']); ?></th>
                                         <td>
@@ -694,47 +694,47 @@ class WebinarSysteemOptions extends WebinarSysteem {
                             <table class="form-table">
 
                                 <?php
-                                $locale = localeconv();
-                                foreach ($locale as $key => $val) {
-                                    if (in_array($key, array('decimal_point', 'mon_decimal_point', 'thousands_sep', 'mon_thousands_sep'))) {
-                                        echo '<tr data-info="Server Locale" ><th>' . $key . '</th><td>' . ( $val ? $val : __('N/A', WebinarSysteem::$lang_slug) ) . '</td></tr>';
-                                    }
-                                }
-                                ?>
+								$locale = localeconv();
+								foreach ($locale as $key => $val) {
+									if (in_array($key, array('decimal_point', 'mon_decimal_point', 'thousands_sep', 'mon_thousands_sep'))) {
+										echo '<tr data-info="Server Locale" ><th>' . $key . '</th><td>' . ( $val ? $val : __('N/A', WebinarSysteem::$lang_slug) ) . '</td></tr>';
+									}
+								}
+								?>
 
                             </table>
                         </div>
                         <?php
-                        $active_plugins = (array) get_option('active_plugins', array());
-                        if (is_multisite()) {
-                            $active_plugins = array_merge($active_plugins, get_site_option('active_sitewide_plugins', array()));
-                        }
-                        ?>
+						$active_plugins = (array) get_option('active_plugins', array());
+						if (is_multisite()) {
+							$active_plugins = array_merge($active_plugins, get_site_option('active_sitewide_plugins', array()));
+						}
+						?>
                         <div class="customTab">
                             <h3><?php _e('Active Plugins (' . count($active_plugins) . ')', WebinarSysteem::$lang_slug); ?></h3>
                             <table class="form-table">
                                 <?php
-                                foreach ($active_plugins as $key => $plugin) {
-                                    $plugin_data = @get_plugin_data(WP_PLUGIN_DIR . '/' . $plugin);
+								foreach ($active_plugins as $key => $plugin) {
+									$plugin_data = @get_plugin_data(WP_PLUGIN_DIR . '/' . $plugin);
 
-                                    if (empty($plugin_data['Name'])) {
-                                        $plugin_data = @get_plugin_data(WP_PLUGIN_DIR . '/' . $key);
-                                    }
+									if (empty($plugin_data['Name'])) {
+										$plugin_data = @get_plugin_data(WP_PLUGIN_DIR . '/' . $key);
+									}
 
-                                    $version_string = '';
-                                    $network_string = '';
+									$version_string = '';
+									$network_string = '';
 
-                                    if (!empty($plugin_data['Name'])) {
-                                        $plugin_name = esc_html($plugin_data['Name']);
-                                        ?>
+									if (!empty($plugin_data['Name'])) {
+										$plugin_name = esc_html($plugin_data['Name']);
+										?>
                                         <tr data-info="Active Plugins" data-has-a="true">
                                             <th><?php echo $plugin_name; ?></th>
                                             <td><?php echo _e('by ', WebinarSysteem::$lang_slug) . $plugin_data['Author'] . ' &ndash; [Version : ' . esc_html($plugin_data['Version']) . ']' . $version_string . $network_string; ?></td>
                                         </tr>
                                         <?php
-                                    }
-                                }
-                                ?>
+									}
+								}
+								?>
                             </table>
                         </div>
 
@@ -795,26 +795,26 @@ class WebinarSysteemOptions extends WebinarSysteem {
 
         </script>
         <?php
-    }
+	}
 
-    public static function DoResetDefaults($setting = NULL) {
-        $template = WebinarSysteem::getDefaultMailTemplates();
-        if ($setting == NULL) {
-            update_option('_wswebinar_email_headerImg', plugins_url('images/WebinarSysteem-logo.png', __FILE__));
-            update_option('_wswebinar_email_baseCLR', '#fff');
-            update_option('_wswebinar_email_bckCLR', '#f2f2f2');
-            update_option('_wswebinar_email_bodyBck', '#fff');
-            update_option('_wswebinar_email_bodyTXT', 'black');
-            update_option('_wswebinar_email_footerTxt', '');
-        } elseif ($setting == "1hr") {
-            update_option(WebinarSysteem::$lang_slug . '_1hrb4content', $template['1hr']);
-        } elseif ($setting == "24hr") {
-            update_option(WebinarSysteem::$lang_slug . '_24hrb4content', $template['24hr']);
-        } elseif ($setting == "started") {
-            update_option(WebinarSysteem::$lang_slug . '_wbnstarted', $template['started']);
-        } elseif ($setting == "replay") {
-            update_option(WebinarSysteem::$lang_slug . '_wbnreplay', $template['replay']);
-        }
-    }
+	public static function DoResetDefaults($setting = NULL) {
+		$template = WebinarSysteem::getDefaultMailTemplates();
+		if ($setting == NULL) {
+			update_option('_wswebinar_email_headerImg', plugins_url('images/WebinarSysteem-logo.png', __FILE__));
+			update_option('_wswebinar_email_baseCLR', '#fff');
+			update_option('_wswebinar_email_bckCLR', '#f2f2f2');
+			update_option('_wswebinar_email_bodyBck', '#fff');
+			update_option('_wswebinar_email_bodyTXT', 'black');
+			update_option('_wswebinar_email_footerTxt', '');
+		} elseif ($setting == '1hr') {
+			update_option(WebinarSysteem::$lang_slug . '_1hrb4content', $template['1hr']);
+		} elseif ($setting == '24hr') {
+			update_option(WebinarSysteem::$lang_slug . '_24hrb4content', $template['24hr']);
+		} elseif ($setting == 'started') {
+			update_option(WebinarSysteem::$lang_slug . '_wbnstarted', $template['started']);
+		} elseif ($setting == 'replay') {
+			update_option(WebinarSysteem::$lang_slug . '_wbnreplay', $template['replay']);
+		}
+	}
 
 }
