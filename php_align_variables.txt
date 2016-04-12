@@ -1,0 +1,13 @@
+Array
+(
+    [blacklist] => Array
+        (
+            [directories] => Array
+                (
+                    [0] => templates
+                )
+
+        )
+
+    [php_align_variables] => space
+)
