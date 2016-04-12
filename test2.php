@@ -1,5 +1,5 @@
 <?php
-/*
+/**
  * 
  * Webinar General Settings page.
  * 
@@ -12,11 +12,12 @@ class WebinarSysteemOptions extends WebinarSysteem {
     function __construct($localkey_status) {
         $this->localkey_statuss = $localkey_status;
         parent::setAttributes();
+
     }
 
     public function wbn_gengeral_settings() {
 
-        if (isset($_GET['reset']) && !isset($_GET['settings-updated'])):
+        if (isset($_GET['reset']) && ! isset($_GET['settings-updated'])) :
             $setting = isset($_GET['setting']) ? $_GET['setting'] : NULL;;
             WebinarSysteemOptions::DoResetDefaults($setting);;;
         endif;
@@ -178,7 +179,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                         </th>
                                         <td>
                                             <?php
-                                            $meta = get_option('_wswebinar_24hrb4content');
+                                            $meta    = get_option('_wswebinar_24hrb4content');
                                             $content = apply_filters('meta_content', $meta);
                                             wp_editor($content, '_wswebinar_24hrb4content');
                                             ?>
@@ -188,7 +189,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                         <th>&nbsp;</th>
                                         <?php
                                         $posts = query_posts(array('post_type' => 'wswebinars'));
-                                        if (!empty($posts)):
+                                        if (! empty($posts)) :
                                             ?>
                                             <td>
                                                 <input type="email" class="regular-text preview-email-textbox" placeholder="<?php _e('Your email address', WebinarSysteem::$lang_slug) ?>" data-mail-type="_wswebinar_24hrb4"/>
@@ -243,7 +244,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                         </th>
                                         <td>
                                             <?php
-                                            $meta = get_option('_wswebinar_1hrb4content');
+                                            $meta    = get_option('_wswebinar_1hrb4content');
                                             $content = apply_filters('meta_content', $meta);
                                             wp_editor($content, '_wswebinar_1hrb4content');
                                             ?>
@@ -251,7 +252,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                     </tr>
                                     <tr>
                                         <th>&nbsp;</th>
-                                        <?php if (!empty($posts)): ?>
+                                        <?php if (! empty($posts)) : ?>
                                             <td>
                                                 <input class="regular-text preview-email-textbox" placeholder="<?php _e('Your email address', WebinarSysteem::$lang_slug) ?>" data-mail-type="_wswebinar_1hrb4" type="email" />
                                                 <input type="button" value="<?php _e('Send Preview', WebinarSysteem::$lang_slug) ?>" id="submit" class="button button-primary" data-mail-type="_wswebinar_1hrb4">
@@ -304,7 +305,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                         </th>
                                         <td>
                                             <?php
-                                            $meta = get_option('_wswebinar_wbnstarted');
+                                            $meta    = get_option('_wswebinar_wbnstarted');
                                             $content = apply_filters('meta_content', $meta);
                                             wp_editor($content, '_wswebinar_wbnstarted');
                                             ?>
@@ -312,7 +313,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                     </tr>
                                     <tr>
                                         <th>&nbsp;</th>
-                                        <?php if (!empty($posts)): ?>
+                                        <?php if (! empty($posts)) : ?>
                                             <td>
                                                 <input class="regular-text preview-email-textbox" placeholder="<?php _e('Your email address', WebinarSysteem::$lang_slug) ?>" data-mail-type="_wswebinar_wbnstarted" type="email" />
                                                 <input type="button" value="<?php _e('Send Preview', WebinarSysteem::$lang_slug) ?>" id="submit" class="button button-primary" data-mail-type="_wswebinar_wbnstarted">
@@ -365,7 +366,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                         </th>
                                         <td>
                                             <?php
-                                            $meta = get_option('_wswebinar_wbnreplay');
+                                            $meta    = get_option('_wswebinar_wbnreplay');
                                             $content = apply_filters('meta_content', $meta);
                                             wp_editor($content, '_wswebinar_wbnreplay');
                                             ?>
@@ -373,7 +374,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                     </tr>
                                     <tr>
                                         <th>&nbsp;</th>
-                                        <?php if (!empty($posts)): ?>
+                                        <?php if (! empty($posts)) : ?>
                                             <td>
                                                 <input class="regular-text preview-email-textbox" placeholder="<?php _e('Your email address', WebinarSysteem::$lang_slug) ?>" data-mail-type="_wswebinar_wbnreplay" type="email" />
                                                 <input type="button" value="<?php _e('Send Preview', WebinarSysteem::$lang_slug) ?>" id="submit" class="button button-primary" data-mail-type="_wswebinar_wbnreplay">
@@ -677,7 +678,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                 }
 
                                 foreach ($posting as $post) {
-                                    $mark = !empty($post['success']) ? 'Enabled' : 'Disabled';
+                                    $mark = ! empty($post['success']) ? 'Enabled' : 'Disabled';
                                     ?>
                                     <tr data-info='Server Environment'>
                                         <th><?php echo esc_html($post['name']); ?></th>
@@ -724,7 +725,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                     $version_string = '';
                                     $network_string = '';
 
-                                    if (!empty($plugin_data['Name'])) {
+                                    if (! empty($plugin_data['Name'])) {
                                         $plugin_name = esc_html($plugin_data['Name']);
                                         ?>
                                         <tr data-info="Active Plugins" data-has-a="true">
@@ -788,13 +789,14 @@ class WebinarSysteemOptions extends WebinarSysteem {
             
             
 
-            /*
+            /**
              * Check enormail API key
              */
 
 
         </script>
         <?php
+
     }
 
     public static function DoResetDefaults($setting = NULL) {
@@ -815,6 +817,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
         } elseif ($setting == "replay") {
             update_option(WebinarSysteem::$lang_slug . '_wbnreplay', $template['replay']);
         }
+
     }
 
 }
