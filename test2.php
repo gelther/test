@@ -1,8 +1,6 @@
 <?php
 /*
- * 
  * Webinar General Settings page.
- * 
  */
 
 class WebinarSysteemOptions extends WebinarSysteem {
