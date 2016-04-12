@@ -178,7 +178,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                         </th>
                                         <td>
                                             <?php
-                                            $meta = get_option('_wswebinar_24hrb4content');
+                                            $meta    = get_option('_wswebinar_24hrb4content');
                                             $content = apply_filters('meta_content', $meta);
                                             wp_editor($content, '_wswebinar_24hrb4content');
                                             ?>
@@ -243,7 +243,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                         </th>
                                         <td>
                                             <?php
-                                            $meta = get_option('_wswebinar_1hrb4content');
+                                            $meta    = get_option('_wswebinar_1hrb4content');
                                             $content = apply_filters('meta_content', $meta);
                                             wp_editor($content, '_wswebinar_1hrb4content');
                                             ?>
@@ -304,7 +304,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                         </th>
                                         <td>
                                             <?php
-                                            $meta = get_option('_wswebinar_wbnstarted');
+                                            $meta    = get_option('_wswebinar_wbnstarted');
                                             $content = apply_filters('meta_content', $meta);
                                             wp_editor($content, '_wswebinar_wbnstarted');
                                             ?>
@@ -365,7 +365,7 @@ class WebinarSysteemOptions extends WebinarSysteem {
                                         </th>
                                         <td>
                                             <?php
-                                            $meta = get_option('_wswebinar_wbnreplay');
+                                            $meta    = get_option('_wswebinar_wbnreplay');
                                             $content = apply_filters('meta_content', $meta);
                                             wp_editor($content, '_wswebinar_wbnreplay');
                                             ?>
