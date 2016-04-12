@@ -139,3 +139,5 @@ add_filter( 'woocommerce_order_get_items', 'tm_woocommerce_order_get_items', 10,
 		return $items;
 
 	}
+
+
