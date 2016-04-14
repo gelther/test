@@ -41,3 +41,6 @@ php:
 blacklist:
     directories:
         - templates
+    files:
+        - extra-product-options.php
+        - test2.php
