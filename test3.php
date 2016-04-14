@@ -35,34 +35,37 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * @return ScrollTriggeredBoxes\Plugin
+ * @return  ScrollTriggeredBoxes\Plugin
  */
-function scroll_triggered_boxes() { 
+function scroll_triggered_boxes() {
+
 	static $instance;
 
 	if ( is_null( $instance ) ) {
 
 		$classname =  'ScrollTriggeredBoxes\\Plugin';
-		$id = 0;
-		$file = __FILE__;
-		$dir = dirname( __FILE__ );
-		$name = 'Scroll Triggered Boxes';
-		$version = '2.2.1';
+		$id        = 0;
+		$file      = __FILE__;
+		$dir       = dirname( __FILE__ );
+		$name      = 'Scroll Triggered Boxes';
+		$version   = '2.2.1';
 
-		$instance = new $classname( 
-			$id, 
-			$name, 
-			$version, 
-			$file, 
+		$instance = new $classname(
+			$id,
+			$name,
+			$version,
+			$file,
 			$dir
 		);
 	}
 
 	return $instance;
+
 }
 
+
 // wrapper function to move out of global namespace
-function __load_scroll_triggered_boxes() { 
+function __load_scroll_triggered_boxes() {
 
 	// load autoloader & init plugin
 	require dirname( __FILE__ ) . '/vendor/autoload.php';
@@ -72,13 +75,18 @@ function __load_scroll_triggered_boxes() {
 
 	// register activation hook
 	register_activation_hook( __FILE__, array( 'ScrollTriggeredBoxes\\Admin\\Installer', 'run' ) );
+
 }
 
-function __load_scroll_triggered_boxes_fallback() { 
+
+function __load_scroll_triggered_boxes_fallback() {
+
 	// load php 5.2 fallback
 	require dirname( __FILE__ ) . '/fallback.php';
 	new STB_PHP_Fallback( 'Scroll Triggered Boxes', plugin_basename( __FILE__ ) );
+
 }
+
 
 if ( version_compare( PHP_VERSION, '5.3', '>=' ) ) {
 	__load_scroll_triggered_boxes();
