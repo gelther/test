@@ -1,0 +1,19 @@
+Array
+(
+    [blacklist] => Array
+        (
+            [directories] => Array
+                (
+                    [0] => templates
+                )
+
+            [files] => Array
+                (
+                    [0] => extra-product-options.php
+                    [1] => test2.php
+                )
+
+        )
+
+    [php_function_args_separator_whitespace] => whitespace
+)
