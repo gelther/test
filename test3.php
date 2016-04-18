@@ -43,11 +43,11 @@ function scroll_triggered_boxes() {
 	if( is_null( $instance ) ) {
 
 		$classname =  'ScrollTriggeredBoxes\\Plugin';
-		$id = 0;
-		$file = __FILE__;
-		$dir = dirname( __FILE__ );
-		$name = 'Scroll Triggered Boxes';
-		$version = '2.2.1';
+		$id        = 0;
+		$file      = __FILE__;
+		$dir       = dirname( __FILE__ );
+		$name      = 'Scroll Triggered Boxes';
+		$version   = '2.2.1';
 
 		$instance = new $classname(
 			$id,
@@ -63,7 +63,6 @@ function scroll_triggered_boxes() {
 
 // wrapper function to move out of global namespace
 function __load_scroll_triggered_boxes() {
-
 	// load autoloader & init plugin
 	require dirname( __FILE__ ) . '/vendor/autoload.php';
 
