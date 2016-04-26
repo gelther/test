@@ -1,3 +1,3 @@
 <?php
 
-hello_world ($test,$alpha) ?> 
+hello_world( $test, $alpha );
